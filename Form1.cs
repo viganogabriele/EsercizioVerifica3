@@ -55,27 +55,33 @@ namespace EsercizioVerifica3
        
         private void btnStop_Click(object sender, EventArgs e)
         {
-            string temp;
-            int posStoppato = lst.SelectedIndex;
-            string nomeStoppato = classifica[posStoppato];
-            for(int i = posStoppato; i < posStoppato+3; i++)
+            int start = lst.SelectedIndex;
+            int end = start+3;
+            string temp = classifica[start];
+            for(int i = start; i<end; i++)
             {
-                for(int j = posStoppato; j < posStoppato+3; j++)
-                {
-                    
-                }
+                classifica[i] = classifica[i+1];
             }
-            classifica[posStoppato + 3] = nomeStoppato;
+            classifica[end] = temp;
             Aggiorna(classifica);
         }
 
         private void btnRitiro_Click(object sender, EventArgs e)
         {
+            int start = lst.SelectedIndex;
+            int end = 9;
+            string temp = classifica[start];
+            for (int i = start; i < end; i++)
+            {
+                classifica[i] = classifica[i + 1];
+            }
+            classifica[end] = "X " +temp;
             Aggiorna(classifica);
         }
 
         private void btnFine_Click(object sender, EventArgs e)
         {
+            lblFine.Text = "1: " + classifica[0] + "\n2: " + classifica[1] + "\n3: " + classifica[2];
             Aggiorna(classifica);
         }
 

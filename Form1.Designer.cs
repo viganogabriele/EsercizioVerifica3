@@ -92,7 +92,7 @@
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(123, 48);
             this.btnStop.TabIndex = 5;
-            this.btnStop.Text = "Ritiro";
+            this.btnStop.Text = "Pit Stop";
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
